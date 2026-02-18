@@ -550,6 +550,7 @@ HTML_PAGE = r"""<!DOCTYPE html>
     <h1>エビングハウスの忘却曲線<br>英語学習ツール</h1>
   </div>
   <div class="user-bar" id="user-bar"></div>
+  <div style="text-align:right;margin-bottom:4px"><a onclick="showPage('pg-howto')" style="color:var(--primary);cursor:pointer;font-size:13px;text-decoration:underline">使い方を見る</a></div>
   <div class="date" id="menu-date"></div>
   <div class="review-card" id="review-card">
     <div class="label">今日の復習</div>
@@ -627,6 +628,65 @@ HTML_PAGE = r"""<!DOCTYPE html>
     <h1>登録一覧</h1>
   </div>
   <div id="list-content"></div>
+</div>
+
+<!-- ===== 使い方 ===== -->
+<div id="pg-howto" class="page">
+  <div class="header">
+    <button class="back-btn" onclick="goMenu()">← 戻る</button>
+    <h1>使い方</h1>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:17px;margin-bottom:8px">このアプリについて</h2>
+    <p style="font-size:14px;line-height:1.8;color:var(--text-light)">
+      エビングハウスの忘却曲線に基づいて、英単語・英語フレーズを効率的に記憶するための学習ツールです。
+      登録した単語は <strong>1日後・3日後・7日後・14日後・30日後</strong> の計5回、最適なタイミングで復習テストが出題されます。
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:17px;margin-bottom:8px">アカウント登録</h2>
+    <p style="font-size:14px;line-height:1.8;color:var(--text-light)">
+      初回はログイン画面の「新規登録」リンクからアカウントを作成してください。
+      ユーザー名（2文字以上）とパスワード（4文字以上）を設定するだけで登録できます。
+      次回以降は同じユーザー名とパスワードでログインしてください。
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:17px;margin-bottom:8px">単語の登録方法</h2>
+    <p style="font-size:14px;line-height:1.8;color:var(--text-light)">
+      <strong>1. 新規登録（1件ずつ）</strong><br>
+      メニューの「新規登録」ボタンから、日本語と英語のペアを登録します。
+      意味がわからない単語や英訳を調べたいときは、入力欄の横にある「日本語→英語で検索」「英語→日本語で検索」ボタンを押すとWeblioの検索結果が開きます。
+      検索結果から覚えたい単語や表現の日本語・英語をコピーして、それぞれの入力欄に貼り付けて登録できます。<br><br>
+      <strong>2. 一括登録（まとめて）</strong><br>
+      「一括登録」を使えば、複数の単語を一度に登録できます。
+      1行に「日本語 / 英語」の形式で入力してください。
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:17px;margin-bottom:8px">復習テストの使い方</h2>
+    <p style="font-size:14px;line-height:1.8;color:var(--text-light)">
+      <strong>1.</strong> メニュー画面に「今日の復習」の件数が表示されます。<br>
+      <strong>2.</strong>「復習テスト」ボタンを押すと、日本語が表示されるので対応する英語を入力してください。<br>
+      <strong>3.</strong> 正解するとスケジュールが次に進みます。不正解の場合は翌日に再出題されます。<br>
+      <strong>4.</strong> 不正解の問題は、同じテスト内で全問正解するまで繰り返し出題されます。<br>
+      <strong>5.</strong> テスト終了後に「もう一度復習する」で追加練習もできます（記録には影響しません）。
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:17px;margin-bottom:8px">忘却曲線とは？</h2>
+    <p style="font-size:14px;line-height:1.8;color:var(--text-light)">
+      ドイツの心理学者ヘルマン・エビングハウスが発見した、記憶と時間の関係を示す曲線です。
+      人は学習した内容を時間とともに忘れていきますが、適切なタイミングで復習することで記憶の定着率が大幅に向上します。<br><br>
+      このアプリでは「1日後 → 3日後 → 7日後 → 14日後 → 30日後」の間隔で復習を行い、
+      少ない回数で長期記憶への定着を目指します。5回の復習をすべてクリアすると「完了」となります。
+    </p>
+  </div>
 </div>
 
 <!-- ===== 履歴モーダル ===== -->
